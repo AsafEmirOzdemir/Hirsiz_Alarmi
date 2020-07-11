@@ -1,0 +1,107 @@
+int value = 12;
+int value2;
+
+void setup()
+{
+  pinMode(3, OUTPUT);
+  pinMode(12, INPUT);
+}
+
+void loop()
+{  
+  value2 = digitalRead(value);
+  
+  if(value2 == HIGH){
+  	Led_Open();
+    Led_Close();  
+  }
+  
+  else {
+    Leds_Low();
+  }
+}
+
+void Led_Open()
+{
+  digitalWrite(3, HIGH);
+  tone(11, 1000);
+  delay(50);
+  digitalWrite(3, LOW);
+  tone(11, 1000);
+  delay(50);
+  digitalWrite(5, HIGH);
+  tone(11, 1000);
+  delay(50);
+  digitalWrite(5, LOW);
+  tone(11, 1000);
+  delay(50);
+  digitalWrite(6, HIGH);
+  tone(11, 1000);
+  delay(50);
+  digitalWrite(6, LOW);
+  tone(11, 1000);
+  delay(50);
+  digitalWrite(9, HIGH);
+  tone(11, 1000);
+  delay(50);
+  digitalWrite(9, LOW);
+  tone(11, 1000);
+  delay(50);
+  tone(11, 1000);
+  digitalWrite(10, HIGH);
+  delay(50);
+  tone(11, 1000);
+}
+
+void Led_Close()
+{
+  digitalWrite(10, HIGH);
+  tone(11, 1000);
+  delay(50);
+  digitalWrite(10, LOW);
+  tone(11, 1000);
+  delay(50);
+  digitalWrite(9, HIGH);
+  tone(11, 1000);
+  delay(50);
+  digitalWrite(9, LOW);
+  tone(11, 1000);
+  delay(50);
+  digitalWrite(6, HIGH);
+  tone(11, 1000);
+  delay(50);
+  digitalWrite(6, LOW);
+  tone(11, 1000);
+  delay(50);
+  digitalWrite(5, HIGH);
+  tone(11, 1000);
+  delay(50);
+  digitalWrite(5, LOW);
+  tone(11, 1000);
+  delay(50);
+  digitalWrite(3, HIGH);
+  tone(11, 1000);
+  delay(50);
+  digitalWrite(3, LOW);
+  tone(11, 1000);
+  delay(50);
+}
+
+void Leds_Low()
+{
+  digitalWrite(3, LOW);
+  digitalWrite(5, LOW);
+  digitalWrite(6, LOW);
+  digitalWrite(9, LOW);
+  digitalWrite(10, LOW);
+}
+
+
+
+
+
+
+
+
+
+
